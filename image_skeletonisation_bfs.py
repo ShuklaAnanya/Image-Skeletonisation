@@ -131,6 +131,13 @@ def moveGen(image, queue):
     # Return Updated Image, Next Set of Boundary Pixels, Pixel Updates, Condition Checks, and Number of Boundary Pixels
     return image, next_boundary_queue, pixel_updates, condition_checks, next_boundary_queue.qsize()
 
+'''
+Logic of the goalTest Function:
+To Check if the Queue is Empty, i.e., No More Pixels to Process the Goal State is Reached
+'''
+def goalTest(queue):
+    return queue.empty()
+
 # Breadth First Search Traversal
 def bfs_traversal(image): 
     
@@ -166,13 +173,6 @@ def bfs_traversal(image):
     print("Total time taken (seconds):", time_taken)
     
     return image
-
-'''
-Logic of the goalTest Function:
-To Check if the Queue is Empty, i.e., No More Pixels to Process the Goal State is Reached
-'''
-def goalTest(queue):
-    return queue.empty()
 
 ##__main__##
 
